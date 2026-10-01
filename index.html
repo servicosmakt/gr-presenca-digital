@@ -1,932 +1,296 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GR Presença Digital | Presença Digital para Pequenos Negócios</title>
-  <meta name="description" content="GR Presença Digital: criação de sites, Google Perfil da Empresa, links personalizados, cartões digitais e divulgação local para profissionais autônomos e pequenos negócios." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://grpresencadigital.com.br/" />
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Cookie check</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://grpresencadigital.com.br/" />
-  <meta property="og:title" content="GR Presença Digital | Presença Digital para Pequenos Negócios" />
-  <meta property="og:description" content="GR Presença Digital: criação de sites, Google Perfil da Empresa, links personalizados, cartões digitais e divulgação local para profissionais autônomos e pequenos negócios." />
-  <meta property="og:site_name" content="GR Presença Digital" />
-  <meta property="og:locale" content="pt_BR" />
+      body {
+        font-family: 'Inter', Helvetica, Arial, sans-serif;
+        background: light-dark(#F8F8F7, #191919);
+        color: light-dark(#1f1f1f, #e3e3e3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="GR Presença Digital | Presença Digital para Pequenos Negócios" />
-  <meta name="twitter:description" content="GR Presença Digital: criação de sites, Google Perfil da Empresa, links personalizados, cartões digitais e divulgação local para profissionais autônomos e pequenos negócios." />
+      .container {
+        background: light-dark(#FFFFFF, #1F1F1F);
+        padding: 32px;
+        border-radius: 16px;
+        border: 1px solid light-dark(#E2E3E4, #3E3E3E);
+        max-width: min(80%, 500px);
+        width: 100%;
+        color: light-dark(#2B2D31, #D4D4D4);
+      }
 
-  <!-- Google Fonts - Poppins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+      h1 {
+        font-size: 20px;
+        font-weight: 500;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: light-dark(#2B2D31, #D4D4D4);
+      }
 
-  <!-- JSON-LD LocalBusiness -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "GR Presença Digital",
-    "description": "Presença digital simples, profissional e acessível para profissionais autônomos e pequenos negócios.",
-    "url": "https://grpresencadigital.com.br/",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Belo Horizonte",
-      "addressRegion": "MG",
-      "addressCountry": "BR"
-    },
-    "areaServed": "Negócios locais e profissionais autônomos",
-    "knowsAbout": [
-      "Criação de Sites",
-      "Google Perfil da Empresa",
-      "Link Personalizado para Bio",
-      "Cartão Digital Interativo",
-      "Divulgação Local do seu Negócio"
-    ]
-  }
-  </script>
+      p {
+        font-size: 14px;
+        color: light-dark(#2B2D31, #D4D4D4);
+        line-height: 21px;
+        margin: 0 0 1.5rem 0;
+      }
 
-  <!-- Arquivo de Estilos Externo -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+      .icon {
+        margin-bottom: 1rem;
+        line-height: 0;
+      }
 
-  <!-- HEADER -->
-  <header class="site-header" id="header">
-    <div class="container header-content">
-      <!-- Presença Digital Brand -->
-      <a href="#inicio" class="brand-logo" aria-label="Presença Digital - Página Inicial">
-        <div class="brand-symbol">GR</div>
-        <div class="brand-name">Presença Digital</div>
-      </a>
+      .button-container {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 2rem;
+      }
 
-      <!-- Menu Navigation -->
-      <nav aria-label="Navegação Principal">
-        <ul class="nav-menu">
-          <li><a href="#inicio" class="nav-link">Início</a></li>
-          <li><a href="#servicos" class="nav-link">Serviços</a></li>
-          <li><a href="#publico" class="nav-link">Para quem é</a></li>
-          <li><a href="#como-funciona" class="nav-link">Como funciona</a></li>
-          <li><a href="#sobre" class="nav-link">Sobre</a></li>
-          <li><a href="#pacotes" class="nav-link">Pacotes</a></li>
-        </ul>
-      </nav>
+      button {
+        background-color: light-dark(#fff, #323232);
+        color: light-dark(#2B2D31, #FCFCFC);
+        border: 1px solid light-dark(#E2E3E4, #3E3E3E);
+        border-radius: 12px;
+        padding: 8px 12px;
+        font-size: 14px;
+        line-height: 21px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        font-weight: 400;
+        font-family: 'Inter', Helvetica, Arial, sans-serif;
+        width: 100%;
+      }
 
-      <!-- Right Action: Compact Contact Button in Site Palette -->
-      <div class="header-actions">
-        <a href="#contato" class="btn-nav-contact js-wa-general" aria-label="Contato com a GR Presença Digital">
-          <svg class="wa-icon" style="width: 16px; height: 16px;" viewBox="0 0 24 24">
-            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/>
+      button:hover {
+        background-color: light-dark(#EAEAEB, #424242);
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      /* Loading Spinner Animation */
+      .spinner {
+        margin: 0 auto 1.5rem auto;
+        width: 40px;
+        height: 40px;
+        border: 4px solid light-dark(#f0f0f0, #262626);
+        border-top: 4px solid light-dark(#076eff, #87a9ff); /* Blue color */
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      .logo {
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto 2rem auto;
+      }
+
+      .logo.hidden {
+        display: none;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        class="logo"
+        src="https://www.gstatic.com/images/branding/productlogos/ai_studio/v1/web-512dp/logo_ai_studio_color_1x_web_512dp.png"
+        alt="AI Studio Logo"
+        width="256"
+        height="256"
+      />
+      <div class="spinner"></div>
+      <div id="error-ui" class="hidden">
+        <div class="icon">
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            width="48px"
+            height="48px"
+            fill="#D73A49"
+          >
+            <path
+              d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z"
+            />
           </svg>
-          <span>Contato</span>
-        </a>
-
-        <!-- Mobile Hamburger Toggle -->
-        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menu de navegação" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div class="mobile-drawer" id="mobileDrawer">
-      <a href="#inicio" class="nav-link">Início</a>
-      <a href="#servicos" class="nav-link">Serviços</a>
-      <a href="#publico" class="nav-link">Para quem é</a>
-      <a href="#como-funciona" class="nav-link">Como funciona</a>
-      <a href="#sobre" class="nav-link">Sobre</a>
-      <a href="#pacotes" class="nav-link">Pacotes</a>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO SECTION -->
-    <section class="hero-section" id="inicio">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-tagline">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-            </svg>
-            Presença Digital Acessível e Profissional
-          </div>
-          <h1>Seu Negócio Local, Presente no Digital.</h1>
-          <p class="hero-text">
-            A GR Presença Digital ajuda profissionais autônomos e pequenos negócios a construírem uma presença profissional na internet, de forma simples, acessível e sem complicação.
-          </p>
-          <p class="hero-subtext">
-            Sites, Google, links personalizados, cartões digitais e divulgação local para ajudar seu negócio a ser encontrado e apresentado de forma profissional.
-          </p>
-          <div class="hero-ctas">
-            <a href="#" class="btn btn-primary js-wa-general" aria-label="Falar no WhatsApp com a GR Presença Digital">
-              <svg class="wa-icon" viewBox="0 0 24 24">
-                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/>
-              </svg>
-              <span>Quero minha presença digital</span>
-            </a>
-            <a href="#servicos" class="btn btn-secondary">
-              <span>Conhecer os serviços</span>
-            </a>
-          </div>
         </div>
-
-        <!-- Modern Visual Composition -->
-        <div class="hero-visual" aria-label="Demonstração visual de presença digital integrada">
-          <div class="hero-showcase-wrap">
-            <!-- Floating Google Card -->
-            <div class="floating-card-google">
-              <div style="width: 32px; height: 32px; border-radius: 8px; background: #EA4335; color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <div style="font-size: 0.74rem; font-weight: 700; color: #1E293B; line-height: 1.2;">Google Perfil</div>
-                <div style="font-size: 0.68rem; color: #16A34A; font-weight: 600; margin-top: 2px;">★ 5.0 • Verificado</div>
-                <div style="font-size: 0.65rem; color: #64748B;">1º nas buscas</div>
-              </div>
-            </div>
-
-            <!-- Smartphone Frame -->
-            <div class="phone-mockup">
-              <div class="phone-speaker"></div>
-              <div class="phone-screen">
-                <div class="phone-header-profile">
-                  <div class="phone-avatar">GR</div>
-                  <div class="phone-profile-name">Seu Negócio</div>
-                  <div class="phone-profile-sub">Atendimento Local e Profissional</div>
-                  <div class="phone-status-pill">
-                    <span class="status-dot"></span>
-                    <span>Online no WhatsApp</span>
-                  </div>
-                </div>
-
-                <div class="phone-links-list">
-                  <div class="phone-link-btn featured">
-                    <div class="phone-link-icon" style="background: rgba(255,255,255,0.2);">
-                      <svg class="wa-icon" style="width: 14px; height: 14px;" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/></svg>
-                    </div>
-                    <span>Agendar pelo WhatsApp</span>
-                  </div>
-
-                  <div class="phone-link-btn">
-                    <div class="phone-link-icon" style="background: #EFF6FF; color: #2563EB;">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
-                    </div>
-                    <span>Conhecer os Serviços</span>
-                  </div>
-
-                  <div class="phone-link-btn">
-                    <div class="phone-link-icon" style="background: #FEF3C7; color: #D97706;">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                    </div>
-                    <span>Horários e Endereço</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Floating Presence Card -->
-            <div class="floating-card-presence">
-              <div style="width: 34px; height: 34px; border-radius: 10px; background: #2563EB; color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </div>
-              <div>
-                <div style="font-size: 0.76rem; font-weight: 700; color: #1E293B;">Estrutura Completa</div>
-                <div style="font-size: 0.66rem; color: #64748B;">Site, Google e Redes 100% integrados</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO — O PROBLEMA -->
-    <section class="problem-section" id="problema">
-      <div class="container">
-        <div class="section-header">
-          <h2>Seu negócio pode ser excelente. Mas as pessoas conseguem encontrar você?</h2>
+        <div id="stepOne" class="text-container">
+          <h1>Action required to load your app</h1>
           <p>
-            Muitos profissionais oferecem bons serviços, mas ainda não possuem uma presença digital organizada para apresentar seu trabalho e facilitar o contato com novos clientes.
+            It looks like your browser is blocking a required security cookie, which is common on
+            older versions of iOS and Safari.
           </p>
-        </div>
-
-        <div class="problem-grid">
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/><line x1="8" x2="14" y1="11" y2="11"/></svg>
-            </div>
-            <h3>Não aparece bem no Google</h3>
-            <p>O cliente procura pelo serviço, mas encontra poucas informações ou um perfil desatualizado.</p>
-          </div>
-
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="m3 9 2.45-4.9A2 2 0 0 1 7.24 3h9.52a2 2 0 0 1 1.8 1.1L21 9"/><path d="M12 3v6"/></svg>
-            </div>
-            <h3>Não tem um site</h3>
-            <p>O negócio depende apenas das redes sociais ou do WhatsApp para apresentar seus serviços.</p>
-          </div>
-
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-            </div>
-            <h3>Informações espalhadas</h3>
-            <p>Contato, localização, serviços e redes sociais ficam espalhados em diferentes lugares.</p>
-          </div>
-
-          <div class="problem-card">
-            <div class="problem-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" x2="22" y1="11" y2="11"/></svg>
-            </div>
-            <h3>Falta apresentação profissional</h3>
-            <p>O negócio existe, mas ainda não possui uma estrutura digital que represente bem seu trabalho.</p>
+          <div class="button-container">
+            <button id="authInSeparateWindowButton" onclick="redirectToReturnUrl(true)">Authenticate in new window</button>
           </div>
         </div>
-
-        <div class="problem-conclusion">
-          <strong>A GR Presença Digital ajuda a organizar essa parte.</strong>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO — SERVIÇOS -->
-    <section class="services-section" id="servicos">
-      <div class="container">
-        <div class="section-header">
-          <h2>Soluções para colocar seu negócio no digital</h2>
-          <p>Serviços práticos, acessíveis e pensados sob medida para profissionais autônomos e pequenos negócios locais.</p>
-        </div>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <h3>Google Perfil da Empresa</h3>
-            <p>Criação ou otimização do Perfil da Empresa no Google para ajudar seu negócio a apresentar informações importantes e facilitar que clientes encontrem você.</p>
-            <div class="service-highlight">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              Criação ou melhoria de perfil existente
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
-            </div>
-            <h3>Criação de Sites</h3>
-            <p>Sites personalizados para apresentar seu negócio, seus serviços, informações importantes e formas de contato de maneira organizada e profissional.</p>
-            <div class="service-clarification">
-              Estrutura clara, design responsivo e focado em facilitar o contato com seus clientes.
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-            </div>
-            <h3>Link Personalizado para Bio</h3>
-            <p>Uma página personalizada para reunir WhatsApp, redes sociais, serviços, localização, site e outros links importantes em um único lugar.</p>
-            <div class="service-clarification">
-              Ideal para colocar na bio do Instagram e organizar seus canais de atendimento.
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
-            </div>
-            <h3>Cartão Digital Interativo</h3>
-            <p>Um cartão digital personalizado com informações e botões clicáveis para facilitar o contato e compartilhar seu negócio.</p>
-            <div class="service-clarification">
-              Compartilhe no WhatsApp com botões diretos para ligação, mensagens, localização e redes.
-            </div>
-          </div>
-
-          <div class="service-card">
-            <div class="service-icon-box">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
-            </div>
-            <h3>Divulgação Local do seu Negócio</h3>
-            <p>Divulgação dos seus serviços em grupos e comunidades regionais, ajudando a aumentar a visibilidade do negócio diretamente para o público da sua cidade e bairro.</p>
-            <div class="service-clarification">
-              Uma apresentação clara e atrativa para atrair novos clientes locais e receber contatos no seu WhatsApp.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO — PARA QUEM É -->
-    <section class="public-section" id="publico">
-      <div class="container">
-        <div class="section-header">
-          <h2>Feito para quem trabalha por conta própria</h2>
+        <div id="stepTwo" class="text-container hidden">
+          <h1>Action required to load your app</h1>
           <p>
-            A GR Presença Digital foi pensada para profissionais que precisam de uma presença digital organizada, mas não querem complicar sua rotina com ferramentas e processos difíceis.
+            It looks like your browser is blocking a required security cookie, which is common on
+            older versions of iOS and Safari.
           </p>
-        </div>
-
-        <div class="public-grid">
-          <div class="public-item">
-            <div class="public-header-row">
-              <div class="public-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M7 7l10 10M17 7 7 17"/></svg>
-              </div>
-              <h3>Nail Designers</h3>
-            </div>
-            <p>Valorize seus alongamentos, nail arts e serviços com uma vitrine online profissional, tabela de preços organizada e link direto para agendamentos rápidos no WhatsApp.</p>
-          </div>
-
-          <div class="public-item">
-            <div class="public-header-row">
-              <div class="public-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12m0 0 3.88 3.88M12 12l3.88-3.88M12 12l-3.88 3.88"/><circle cx="18" cy="18" r="3"/></svg>
-              </div>
-              <h3>Salão de Beleza</h3>
-            </div>
-            <p>Apresente seus serviços capilares e procedimentos estéticos, localização no Google Maps e horários de funcionamento, facilitando que novas clientes encontrem e agendem com sua equipe.</p>
-          </div>
-
-          <div class="public-item">
-            <div class="public-header-row">
-              <div class="public-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 3v18M15 3v18"/></svg>
-              </div>
-              <h3>Barbearias</h3>
-            </div>
-            <p>Garanta destaque no Google Maps da sua região com fotos do espaço, rotas de acesso e botão de WhatsApp para o cliente marcar horário sem complicação.</p>
-          </div>
-
-          <div class="public-item">
-            <div class="public-header-row">
-              <div class="public-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Z"/></svg>
-              </div>
-              <h3>Esteticistas</h3>
-            </div>
-            <p>Destaque seus tratamentos faciais e corporais com explicações claras, orientações aos clientes e uma apresentação que transmita total credibilidade e cuidado.</p>
-          </div>
-
-          <div class="public-item">
-            <div class="public-header-row">
-              <div class="public-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
-              </div>
-              <h3>Lash Designers</h3>
-            </div>
-            <p>Mostre suas técnicas de extensão de cílios, fotos de resultados e recomendações de cuidados pré e pós-procedimento, com contato direto para reservas de horários.</p>
-          </div>
-
-          <div class="public-item">
-            <div class="public-header-row">
-              <div class="public-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-              </div>
-              <h3>Profissionais Autônomos</h3>
-            </div>
-            <p>Prestadores de serviços, consultores, terapeutas e profissionais independentes que precisam de uma apresentação formal e organizada para passar confiança aos clientes.</p>
-          </div>
-
-          <div class="public-item">
-            <div class="public-header-row">
-              <div class="public-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              </div>
-              <h3>Pequenos Negócios Locais</h3>
-            </div>
-            <p>Lojas de bairro, confeitarias, ateliês e comércios locais que desejam ser encontrados com facilidade no Google e atrair consumidores da sua própria cidade ou região.</p>
+          <div class="button-container">
+            <button id="interactButton" onclick="redirectToReturnUrl(false)">Close and continue</button>
           </div>
         </div>
-
-        <div class="public-callout">
-          <p>Seu negócio pode ser pequeno. Sua apresentação não precisa ser.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO — PACOTES -->
-    <section class="packages-section" id="pacotes">
-      <div class="container">
-        <div class="section-header">
-          <h2>Pacotes para cada momento do seu negócio</h2>
-          <p>Escolha a estrutura ideal para colocar sua marca em destaque e facilitar que novos clientes entrem em contato.</p>
-        </div>
-
-        <div class="packages-grid">
-          <!-- PACOTE 1 -->
-          <div class="package-card">
-            <h3>Presença Digital</h3>
-            <p class="package-description">Para quem precisa organizar os principais pontos da presença digital do negócio.</p>
-            <div class="package-price">
-              <span>SOLUÇÃO PERSONALIZADA</span>
-              para o seu Negócio
-            </div>
-            <ul class="package-features">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Criação ou otimização do Perfil da Empresa no Google</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Link personalizado para Bio</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Cartão Digital Interativo</span>
-              </li>
-            </ul>
-            <a href="#" class="btn btn-secondary btn-block js-wa-p1" aria-label="Contratar pacote Presença Digital pelo WhatsApp">
-              <svg class="wa-icon" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/></svg>
-              <span>Quero saber mais</span>
-            </a>
+        <div id="stepThree" class="text-container hidden">
+          <h1>Almost there!</h1>
+          <p>
+            Grant permission for the required security cookie below.
+          </p>
+          <div class="button-container">
+            <button id="grantPermissionButton" onclick="grantStorageAccess()">Grant permission</button>
           </div>
-
-          <!-- PACOTE 2 -->
-          <div class="package-card featured">
-            <span class="featured-badge">Mais Completo</span>
-            <h3>Presença + Site</h3>
-            <p class="package-description">Para quem quer uma presença digital mais completa, com um site próprio para apresentar seu negócio.</p>
-            <div class="package-price">
-              <span>SOLUÇÃO PERSONALIZADA</span>
-              para o seu Negócio
-            </div>
-            <ul class="package-features">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Criação ou otimização do Perfil no Google</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Link personalizado para Bio</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Cartão Digital Interativo</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Criação de Site</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Página de serviços organizada</span>
-              </li>
-            </ul>
-            <a href="#" class="btn btn-primary btn-block js-wa-p2" aria-label="Contratar pacote Presença + Site pelo WhatsApp">
-              <svg class="wa-icon" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/></svg>
-              <span>Quero saber mais</span>
-            </a>
-          </div>
-
-          <!-- PACOTE 3 -->
-          <div class="package-card">
-            <h3>Presença + Divulgação</h3>
-            <p class="package-description">Para quem quer organizar sua presença digital e também divulgar seus serviços localmente.</p>
-            <div class="package-price">
-              <span>SOLUÇÃO PERSONALIZADA</span>
-              para o seu Negócio
-            </div>
-            <ul class="package-features">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Criação ou otimização do Perfil no Google</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Link personalizado para Bio</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Cartão Digital Interativo</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Criação de Site</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Divulgação Local do seu Negócio</span>
-              </li>
-            </ul>
-            <a href="#" class="btn btn-secondary btn-block js-wa-p3" aria-label="Contratar pacote Presença + Divulgação pelo WhatsApp">
-              <svg class="wa-icon" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/></svg>
-              <span>Quero saber mais</span>
-            </a>
-          </div>
-        </div>
-
-        <p class="package-disclaimer">
-          Conte-nos o que seu negócio precisa e receba uma proposta personalizada.
-        </p>
-      </div>
-    </section>
-
-    <!-- SEÇÃO — COMO FUNCIONA -->
-    <section class="how-section" id="como-funciona">
-      <div class="container">
-        <div class="section-header">
-          <h2>Do primeiro contato à presença digital pronta</h2>
-          <p>Um processo simples, transparente e sem burocracia para você focar no atendimento dos seus clientes.</p>
-        </div>
-
-        <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-number">01</div>
-            <h3>Você entra em contato</h3>
-            <p>Conte pelo WhatsApp um pouco sobre seu negócio e o que você precisa.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">02</div>
-            <h3>Entendemos o projeto</h3>
-            <p>Conversamos sobre as necessidades do negócio e identificamos as soluções mais adequadas.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">03</div>
-            <h3>Eu preparo tudo</h3>
-            <p>O projeto é criado e organizado com base nas informações fornecidas.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">04</div>
-            <h3>Você recebe pronto</h3>
-            <p>Sua presença digital fica organizada e pronta para apresentar seu negócio.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO — EXEMPLOS -->
-    <section class="examples-section" id="exemplos">
-      <div class="container">
-        <div class="section-header">
-          <h2>Veja o que pode ser criado para o seu negócio</h2>
-          <p>Conheça exemplos visuais de como cada solução pode ser apresentada e estruturada.</p>
-        </div>
-
-        <!-- Navigation Tabs for Examples -->
-        <div class="example-tabs" role="tablist">
-          <button class="tab-btn active" data-tab="tab-site" role="tab" aria-selected="true">1. Site</button>
-          <button class="tab-btn" data-tab="tab-google" role="tab" aria-selected="false">2. Google Perfil</button>
-          <button class="tab-btn" data-tab="tab-biolink" role="tab" aria-selected="false">3. Link para Bio</button>
-          <button class="tab-btn" data-tab="tab-card" role="tab" aria-selected="false">4. Cartão Digital</button>
-          <button class="tab-btn" data-tab="tab-divulgacao" role="tab" aria-selected="false">5. Divulgação Local</button>
-        </div>
-
-        <!-- Tab 1: Site -->
-        <div class="tab-panel active" id="tab-site" role="tabpanel">
-          <div class="demo-badge-bar">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-            <span>Projeto de demonstração • Exemplo demonstrativo de estrutura de site</span>
-          </div>
-          <div class="demo-body">
-            <div class="demo-info">
-              <h3>Site Personalizado e Responsivo</h3>
-              <p>Estrutura limpa contendo cabeçalho institucional, apresentação dos serviços, tabela informativa, endereço/atendimento e botão com chamada direta para o WhatsApp.</p>
-              <p>Totalmente legível em celulares, tablets e computadores, transmitindo seriedade e facilidade de contato imediato.</p>
-            </div>
-            <div class="demo-preview-canvas">
-              <div style="background: white; border-radius: 8px; border: 1px solid #E2E8F0; padding: 16px;">
-                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid #F1F5F9; padding-bottom: 8px; margin-bottom: 12px;">
-                  <span style="font-weight:700; color:#14213D; font-size: 0.85rem;">Studio Bela Estética</span>
-                  <span style="font-size:0.75rem; background:#DCFCE7; color:#166534; padding:2px 8px; border-radius:12px; font-weight:600;">Exemplo</span>
-                </div>
-                <div style="background: #EFF6FF; border-radius: 6px; padding: 12px; margin-bottom: 10px;">
-                  <div style="font-size: 0.85rem; font-weight: 600; color:#1E3A8A;">Realce a sua beleza natural com cuidados especializados</div>
-                  <div style="font-size: 0.75rem; color:#475569; margin-top: 4px;">Atendimento personalizado em ambiente confortável.</div>
-                </div>
-                <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.75rem; margin-bottom: 12px;">
-                  <div style="border: 1px solid #E2E8F0; padding: 6px; border-radius: 4px;">• Design de Sobrancelhas</div>
-                  <div style="border: 1px solid #E2E8F0; padding: 6px; border-radius: 4px;">• Lash Lifting</div>
-                  <div style="border: 1px solid #E2E8F0; padding: 6px; border-radius: 4px;">• Limpeza Facial</div>
-                  <div style="border: 1px solid #E2E8F0; padding: 6px; border-radius: 4px;">• Manicure & Pedicure</div>
-                </div>
-                <div style="background: #25D366; color: white; text-align: center; padding: 8px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">
-                  Agendar pelo WhatsApp
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 2: Google Perfil -->
-        <div class="tab-panel" id="tab-google" role="tabpanel">
-          <div class="demo-badge-bar">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-            <span>Projeto de demonstração • Exemplo demonstrativo de Perfil no Google</span>
-          </div>
-          <div class="demo-body">
-            <div class="demo-info">
-              <h3>Google Perfil da Empresa Otimizado</h3>
-              <p>Configuração dos dados essenciais: categorias corretas de atuação, horários reais de funcionamento, serviços detalhados, área de cobertura e fotos do espaço ou produtos.</p>
-              <p>Facilita que pessoas pesquisando serviços nas proximidades vejam o negócio no Google e no Google Maps.</p>
-            </div>
-            <div class="demo-preview-canvas">
-              <div style="background: white; border-radius: 8px; border: 1px solid #E2E8F0; padding: 16px;">
-                <div style="font-size: 0.95rem; font-weight: 700; color: #1A73E8; margin-bottom: 2px;">Studio de Beleza Local</div>
-                <div style="font-size: 0.78rem; color: #5F6368; margin-bottom: 8px;">Salão de Beleza / Estética</div>
-                <div style="display: flex; gap: 6px; margin-bottom: 12px;">
-                  <span style="background: #E8F0FE; color: #1967D2; padding: 4px 10px; border-radius: 14px; font-size: 0.74rem; font-weight: 500;">Verificado</span>
-                  <span style="background: #F1F3F4; color: #3C4043; padding: 4px 10px; border-radius: 14px; font-size: 0.74rem;">Horários Atualizados</span>
-                </div>
-                <div style="font-size: 0.78rem; color: #3C4043; line-height: 1.5; border-top: 1px solid #F1F5F9; padding-top: 8px;">
-                  📍 Atendimento na região e cidades vizinhas<br/>
-                  🕒 Seg a Sáb: 09:00 às 18:00<br/>
-                  📞 Botão direto para ligação e WhatsApp
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 3: Link para Bio -->
-        <div class="tab-panel" id="tab-biolink" role="tabpanel">
-          <div class="demo-badge-bar">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-            <span>Projeto de demonstração • Exemplo demonstrativo de página de links</span>
-          </div>
-          <div class="demo-body">
-            <div class="demo-info">
-              <h3>Página Personalizada para Bio</h3>
-              <p>Reúne os canais mais procurados pelos clientes em uma única página leve e agradável, perfeitamente adaptada para abertura rápida pelo Instagram e WhatsApp.</p>
-              <p>Evita que o visitante se perca procurando onde falar com você.</p>
-            </div>
-            <div class="demo-preview-canvas">
-              <div style="max-width: 260px; margin: 0 auto; background: white; border: 2px solid #E2E8F0; border-radius: 20px; padding: 18px; text-align: center;">
-                <div style="width: 48px; height: 48px; border-radius: 50%; background: #2563EB; color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; font-weight: 700;">GR</div>
-                <div style="font-weight: 700; font-size: 0.88rem; color: #14213D;">Nome do Negócio</div>
-                <div style="font-size: 0.74rem; color: #64748B; margin-bottom: 12px;">Serviços e Atendimento</div>
-                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.78rem;">
-                  <div style="background: #25D366; color: white; padding: 8px; border-radius: 8px; font-weight: 600;">Conversar no WhatsApp</div>
-                  <div style="background: #F8FAFC; border: 1px solid #CBD5E1; color: #1E293B; padding: 8px; border-radius: 8px;">Conhecer Serviços e Valores</div>
-                  <div style="background: #F8FAFC; border: 1px solid #CBD5E1; color: #1E293B; padding: 8px; border-radius: 8px;">Como Chegar / Localização</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 4: Cartão Digital -->
-        <div class="tab-panel" id="tab-card" role="tabpanel">
-          <div class="demo-badge-bar">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-            <span>Projeto de demonstração • Exemplo demonstrativo de Cartão Digital Interativo</span>
-          </div>
-          <div class="demo-body">
-            <div class="demo-info">			
-              <h3>Cartão Digital Interativo</h3>			  
-              <p>Com a mesma praticidade do link na bio, o Cartão Digital reúne os canais essenciais do seu negócio em um layout moderno: WhatsApp direto, endereço com rota no Google Maps, catálogo de serviços e opção de salvar o contato direto na agenda.</p>
-              <p>Perfeito para enviar pelo WhatsApp para novos clientes ou contatos que pedem suas informações.</p>
-            </div>
-            <div class="demo-preview-canvas">
-              <div style="max-width: 260px; margin: 0 auto; background: white; border: 2px solid #E2E8F0; border-radius: 20px; padding: 18px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.04);">
-                <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #14213D 0%, #2563EB 100%); color: white; display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; font-weight: 700; font-size: 1rem; box-shadow: 0 2px 8px rgba(37,99,235,0.3);">GR</div>
-                <div style="font-weight: 700; font-size: 0.88rem; color: #14213D;">Nome do Seu Negócio</div>
-                <div style="font-size: 0.74rem; color: #64748B; margin-bottom: 12px;">Cartão Digital Interativo</div>
-                <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.78rem;">
-                  <div style="background: #25D366; color: white; padding: 9px 12px; border-radius: 8px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px;">
-                    <svg class="wa-icon" style="width: 14px; height: 14px;" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/></svg>
-                    <span>Falar no WhatsApp</span>
-                  </div>
-                  <div style="background: #F8FAFC; border: 1px solid #CBD5E1; color: #1E293B; padding: 9px 12px; border-radius: 8px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px;">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                    <span>Endereço e Como Chegar</span>
-                  </div>
-                  <div style="background: #F8FAFC; border: 1px solid #CBD5E1; color: #1E293B; padding: 9px 12px; border-radius: 8px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px;">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
-                    <span>Catálogo de Serviços</span>
-                  </div>
-                  <div style="background: #F8FAFC; border: 1px solid #CBD5E1; color: #1E293B; padding: 9px 12px; border-radius: 8px; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 6px;">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                    <span>Salvar Contato na Agenda</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Tab 5: Divulgação Local -->
-        <div class="tab-panel" id="tab-divulgacao" role="tabpanel">
-          <div class="demo-badge-bar">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-            <span>Projeto de demonstração • Exemplo demonstrativo de Divulgação Local do seu Negócio</span>
-          </div>
-          <div class="demo-body">
-            <div class="demo-info">
-              <h3>Divulgação Local do seu Negócio</h3>
-              <p>Apresentação profissional do seu negócio em grupos e comunidades regionais, onde moradores locais costumam buscar recomendações de profissionais e serviços de confiança.</p>
-              <p>Mensagem clara, apresentação visual atrativa e chamada rápida direto para seu WhatsApp.</p>
-            </div>
-            <div class="demo-preview-canvas">
-              <div style="background: white; border: 1px solid #E2E8F0; border-radius: 10px; padding: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-                <!-- Header da Comunidade -->
-                <div style="display:flex; align-items:center; justify-content: space-between; border-bottom: 1px solid #F1F5F9; padding-bottom: 8px; margin-bottom: 10px;">
-                  <div style="display:flex; align-items:center; gap: 8px;">
-                    <div style="width: 28px; height: 28px; border-radius: 6px; background: #1877F2; color: white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size: 0.75rem;">F</div>
-                    <div>
-                      <div style="font-size: 0.76rem; font-weight: 600; color: #1E293B;">Comunidade de Moradores e Bairros</div>
-                      <div style="font-size: 0.68rem; color: #64748B;">Recomendações e Serviços Locais</div>
-                    </div>
-                  </div>
-                  <span style="font-size: 0.68rem; background: #EFF6FF; color: #1E40AF; padding: 2px 8px; border-radius: 10px; font-weight: 600;">Post Local</span>
-                </div>
-                <!-- Publicação Profissional do Negócio do Cliente -->
-                <div style="display:flex; align-items:center; gap: 8px; margin-bottom: 8px;">
-                  <div style="width: 32px; height: 32px; border-radius: 50%; background: #2563EB; color: white; display:flex; align-items:center; justify-content:center; font-weight:700; font-size: 0.75rem;">GR</div>
-                  <div>
-                    <div style="font-size: 0.8rem; font-weight: 700; color: #14213D;">Seu Negócio</div>
-                    <div style="font-size: 0.68rem; color: #64748B;">Profissional da Região • Atendimento Local</div>
-                  </div>
-                </div>
-                <div style="font-size: 0.76rem; color: #334155; line-height: 1.5; background: #F8FAFC; padding: 10px; border-radius: 6px; border-left: 3px solid #2563EB; margin-bottom: 8px;">
-                  "✨ Seu negócio merece ser encontrado!
-
-Divulgue seus serviços para pessoas da sua região e atraia novos clientes através de uma comunicação simples, profissional e local."
-                </div>
-                <div style="background: #25D366; color: white; text-align: center; padding: 7px; border-radius: 6px; font-size: 0.75rem; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 6px;">
-                  <svg class="wa-icon" style="width: 13px; height: 13px;" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/></svg>
-                  <span>Chamar no WhatsApp do Negócio</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO — DIFERENCIAIS -->
-    <section class="differentials-section" id="diferenciais">
-      <div class="container">
-        <div class="section-header">
-          <h2>Presença digital sem complicação</h2>
-          <p>Tudo o que seu negócio precisa para estar bem posicionado, com clareza e atendimento próximo.</p>
-        </div>
-
-        <div class="diff-grid">
-          <div class="diff-card">
-            <div class="diff-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-            </div>
-            <h3>Simples</h3>
-            <p>Você não precisa entender de tecnologia para ter uma presença digital organizada.</p>
-          </div>
-
-          <div class="diff-card">
-            <div class="diff-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <h3>Profissional</h3>
-            <p>Seu negócio merece uma apresentação que transmita confiança para novos clientes.</p>
-          </div>
-
-          <div class="diff-card">
-            <div class="diff-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
-            </div>
-            <h3>Acessível</h3>
-            <p>Soluções pensadas especialmente para profissionais autônomos e pequenos negócios.</p>
-          </div>
-
-          <div class="diff-card">
-            <div class="diff-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            </div>
-            <h3>Personalizado</h3>
-            <p>Cada projeto é adaptado às necessidades e particularidades do seu negócio.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO — SOBRE -->
-    <section class="about-section" id="sobre">
-      <div class="container">
-        <div class="about-card-wrapper">
-          <div class="about-photo-column">
-            <div class="about-photo-frame" id="foto-sobre-container">
-              <img 
-                src="https://i.postimg.cc/SxrGBW0h/GR-Presenca-Digital-Fundadora.webp" 
-                alt="Foto do Fundador da GR Presença Digital" 
-                class="about-photo-img" 
-                id="foto-sobre-img"
-                loading="lazy"
-              />
-              <div class="about-photo-badge">
-                <span class="badge-status-dot"></span>
-                <span>Fundadora • Gleiciene Rocha</span>
-              </div>
-            </div>
-            <div class="about-photo-tip">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-              <span></span>
-            </div>
-          </div>
-
-          <!-- Coluna de Conteúdo -->
-          <div class="about-content-column">
-            <div class="hero-tagline" style="margin-bottom: 0; width: fit-content;">
-              Sobre
-            </div>
-            <h2>A GR Presença Digital</h2>
-            <p>
-              A <strong>GR Presença Digital</strong> nasceu com uma proposta clara e humana: ajudar profissionais autônomos, profissionais da beleza e pequenos negócios a construírem uma presença digital sólida, organizada e verdadeiramente acessível.
-            </p>
-            <p>
-              Sabemos que a rotina de quem empreende por conta própria é cheia de desafios. Por isso, cuidamos de toda a estrutura na internet site, Perfil no Google, links e divulgação local. Para que você possa continuar focado no que realmente importa: atender bem os seus clientes.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEÇÃO — CTA FINAL -->
-    <section class="final-cta-section" id="contato">
-      <div class="container final-cta-card">
-        <h2>Vamos colocar seu negócio no digital?</h2>
-        <p>Conte um pouco sobre seu negócio e descubra quais soluções podem fazer sentido para você.</p>
-        <a href="#" class="btn btn-primary btn-lg js-wa-general" style="padding: 16px 36px; font-size: 1.05rem;" aria-label="Falar no WhatsApp com a GR Presença Digital agora">
-          <svg class="wa-icon" viewBox="0 0 24 24" style="width: 24px; height: 24px;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/></svg>
-          <span>Vamos Conversar</span>
-        </a>
-        <div class="cta-business-hours"></div>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <!-- Coluna 1: Marca e Descrição -->
-      <div class="footer-brand">
-        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
-          <div class="brand-symbol" style="width: 36px; height: 36px; font-size: 1rem;">GR</div>
-          <h3 style="margin: 0; font-size: 1.25rem; color: #FFFFFF;">Presença Digital</h3>
-        </div>
-        <p>Presença digital simples, profissional e acessível para pequenos negócios e profissionais autônomos.</p>
-      </div>
-
-      <!-- Coluna 2: Navegação Rápida -->
-      <div class="footer-nav">
-        <h4>Navegação</h4>
-        <ul class="footer-links">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#servicos">Serviços</a></li>
-          <li><a href="#publico">Para quem é</a></li>
-          <li><a href="#como-funciona">Como funciona</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#pacotes">Pacotes</a></li>
-        </ul>
-      </div>
-
-      <!-- Coluna 3: Redes Sociais -->
-      <div class="footer-social">
-        <h4>Redes Sociais</h4>
-        <div class="social-icons">
-          <a href="#" class="social-icon-btn" aria-label="Instagram da GR Presença Digital (em breve)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-          </a>
-          <a href="#" class="social-icon-btn" aria-label="Facebook da GR Presença Digital (em breve)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="https://br.pinterest.com/business/hub/" class="social-icon-btn" aria-label="Pinterest da GR Presença Digital (em breve)">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" x2="12" y1="8" y2="16"/><line x1="8" x2="16" y1="12" y2="12"/><circle cx="12" cy="12" r="10"/></svg>
-          </a>
         </div>
       </div>
     </div>
+    <script>
+      const AUTH_FLOW_TEST_COOKIE_NAME = '__SECURE-aistudio_auth_flow_may_set_cookies';
+      const COOKIE_VALUE = 'true';
 
-    <!-- Linha Inferior com Links Institucionais em Destaque -->
-    <div class="container footer-bottom">
-      <p>&copy; 2026 GR Presença Digital. Todos os direitos reservados.</p>
-      <div class="footer-legal-inline">
-        <a href="#privacidade" class="js-open-legal" data-page="privacidade">Política de Privacidade</a>
-        <span class="sep">•</span>
-        <a href="#termos" class="js-open-legal" data-page="termos">Termos de Uso</a>
-        <span class="sep">•</span>
-        <a href="#cookies" class="js-open-legal" data-page="cookies">Política de Cookies</a>
-        <span class="sep">•</span>
-        <a href="#aviso-legal" class="js-open-legal" data-page="aviso-legal">Aviso Legal</a>
-      </div>
-    </div>
-  </footer>
+      function getCookie(name) {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+          let cookie = cookies[i].trim();
+          if (cookie.startsWith(name + '=')) {
+            return cookie.substring(name.length + 1);
+          }
+        }
+        return null;
+      }
 
-  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
-  <a href="#" class="whatsapp-floating js-wa-general" aria-label="Falar pelo WhatsApp" title="Vamos conversar">
-    <svg viewBox="0 0 24 24">
-      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/>
-    </svg>
-  </a>
+      function setAuthFlowTestCookie() {
+        // Set the cookie's TTL to 1 minute. This is a short lived cookie because it is only used
+        // when the user does not have an auth token or their auth token needs to be reset.
+        // Making this cookie too long-lived allows the user to get into a state where they can't
+        // mint a new auth token.
+        document.cookie = `${AUTH_FLOW_TEST_COOKIE_NAME}=${COOKIE_VALUE}; Path=/; Secure; SameSite=None; Domain=${window.location.hostname}; Partitioned; Max-Age=60;`;
+      }
 
-  <!-- Chamada para o arquivo JS -->
-  <script src="script.js"></script>
+      /**
+       * Returns true if the test cookie is set, false otherwise.
+       */
+      function authFlowTestCookieIsSet() {
+        return getCookie(AUTH_FLOW_TEST_COOKIE_NAME) === COOKIE_VALUE;
+      }
 
-</body>
+      /**
+       * Redirects to the return url. If autoClose is true, then the return url will be opened in a
+       * new window, and it will be closed automatically when the page loads.
+       * Options:
+       *   storageAccessGranted: if true, appends __storage_access_granted=1 to
+       *   the return url so the Lua auth script can set the test cookie
+       *   server-side (needed for Safari/iOS where document.cookie is blocked).
+       */
+      async function redirectToReturnUrl(autoClose, storageAccessGranted = false) {
+        const initialReturnUrlStr = new URLSearchParams(window.location.search).get('return_url');
+        const returnUrl = initialReturnUrlStr ? new URL(initialReturnUrlStr) : null;
+
+        // Prevent potentially malicious URLs from being used
+        if (returnUrl.protocol.toLowerCase() === 'javascript:') {
+          console.error('Potentially malicious return URL blocked');
+          return;
+        }
+
+        if (storageAccessGranted) {
+          returnUrl.searchParams.set('__storage_access_granted', '1');
+        }
+
+        if (autoClose) {
+          returnUrl.searchParams.set('__auto_close', '1');
+          const url = new URL(window.location.href);
+          url.searchParams.set('return_url', returnUrl.toString());
+          // Land on the cookie check page first, so the user can interact with it before proceeding
+          // to the return url where cookies can be set.
+          window.open(url.toString(), '_blank');
+          const hasAccess = await document.hasStorageAccess();
+          document.querySelector('#stepOne').classList.add('hidden');
+          if (!hasAccess) {
+            document.querySelector('#stepThree').classList.remove('hidden');
+          } else {
+            window.location.reload();
+          }
+        } else {
+          window.location.href = returnUrl.toString();
+        }
+      }
+
+      /**
+       * Grants the browser permission to set cookies. If successful, then it redirects to the
+       * return url.
+       */
+      async function grantStorageAccess() {
+        try {
+          await document.requestStorageAccess();
+          // Recent Safari/iOS versions block document.cookie entirely in
+          // cross-site iframes, even after requestStorageAccess(). Only
+          // server-side Set-Cookie headers work. Signal to the Lua auth script
+          // via query param so it can set the test cookie server-side.
+          redirectToReturnUrl(false, /* storageAccessGranted= */ true);
+        } catch (err) {
+          console.log('error after button click: ', err);
+        }
+      }
+
+      /**
+       * Verifies that the browser can set cookies. If it can, then it redirects to the return url.
+       * If it can't, then it shows the error UI.
+       */
+      function verifyCanSetCookies() {
+        setAuthFlowTestCookie();
+        if (authFlowTestCookieIsSet()) {
+          // Check if we are on the auto-close flow, and if so show the interact button.
+          const returnUrl = new URLSearchParams(window.location.search).get('return_url');
+          const autoClose = new URL(returnUrl).searchParams.has('__auto_close');
+          if (autoClose) {
+            document.querySelector('#stepOne').classList.add('hidden');
+            document.querySelector('#stepTwo').classList.remove('hidden');
+          } else {
+            redirectToReturnUrl(false);
+            return;
+          }
+        }
+        // The cookie could not be set, so initiate the recovery flow.
+        document.querySelector('.logo').classList.add('hidden');
+        document.querySelector('.spinner').classList.add('hidden');
+        document.querySelector('#error-ui').classList.remove('hidden');
+      }
+
+      // Start the cookie verification process.
+      verifyCanSetCookies();
+    </script>
+  </body>
 </html>

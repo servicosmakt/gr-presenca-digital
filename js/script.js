@@ -25,8 +25,19 @@ function triggerWhatsApp(msgKey) {
   window.open(url, '_blank', 'noopener,noreferrer');
 }
 
-// Associa eventos de clique nos botões
+// Associa eventos de clique nos botões e carrega funções quando o site abre
 document.addEventListener("DOMContentLoaded", () => {
+  
+  // Script básico de verificação
+  console.log('Site carregado com sucesso!');
+
+  // Adiciona ano atual dinamicamente no footer
+  const footerElement = document.querySelector('.footer-bottom p');
+  if (footerElement) {
+    const ano = new Date().getFullYear();
+    footerElement.innerHTML = `&copy; ${ano} GR Presença Digital. Todos os direitos reservados.`;
+  }
+
   // Botões gerais
   document.querySelectorAll(".js-wa-general").forEach(el => {
     el.addEventListener("click", (e) => {
@@ -116,7 +127,5 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-});
-      }
-  });
+
 });

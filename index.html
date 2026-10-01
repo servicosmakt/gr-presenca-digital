@@ -1,296 +1,805 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
-    <title>Cookie check</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-      :root {
-        color-scheme: light dark;
-      }
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GR Presença Digital | Presença Digital, Google e Sites para Pequenos Negócios e Estética</title>
+  <meta name="description" content="GR Presença Digital: coloque seu negócio de beleza, estética e prestação de serviços, no topo do Google, crie links profissionais para bio, cartões digitais e sites sofisticados e acessíveis." />
+  
+  <!-- SEO: HABILITADO PARA INDEXAÇÃO NO GOOGLE -->
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://grpresencadigital.site/" />
 
-      body {
-        font-family: 'Inter', Helvetica, Arial, sans-serif;
-        background: light-dark(#F8F8F7, #191919);
-        color: light-dark(#1f1f1f, #e3e3e3);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        min-height: 100vh;
-        margin: 0;
-        padding: 20px;
-        text-align: center;
-      }
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://grpresencadigital.site/" />
+  <meta property="og:title" content="GR Presença Digital | Coloque seu Negócio no Digital" />
+  <meta property="og:description" content="Google Perfil otimizado, links para bio, cartões interativos e sites exclusivos para profissionais da beleza e autonômos." />
+  <meta property="og:site_name" content="GR Presença Digital" />
+  <meta property="og:locale" content="pt_BR" />
 
-      .container {
-        background: light-dark(#FFFFFF, #1F1F1F);
-        padding: 32px;
-        border-radius: 16px;
-        border: 1px solid light-dark(#E2E3E4, #3E3E3E);
-        max-width: min(80%, 500px);
-        width: 100%;
-        color: light-dark(#2B2D31, #D4D4D4);
-      }
+  <!-- Google Fonts - Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-      h1 {
-        font-size: 20px;
-        font-weight: 500;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        color: light-dark(#2B2D31, #D4D4D4);
-      }
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "GR Presença Digital",
+    "description": "Colocamos o seu negócio no digital de forma acessível: Google Perfil, SEO local, links para bio, cartões digitais e sites de alto padrão.",
+    "url": "https://grpresencadigital.site/",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Belo Horizonte",
+      "addressRegion": "MG",
+      "addressCountry": "BR"
+    },
+    "areaServed": "Negócios locais e profissionais autônomos"
+  }
+  </script>
 
-      p {
-        font-size: 14px;
-        color: light-dark(#2B2D31, #D4D4D4);
-        line-height: 21px;
-        margin: 0 0 1.5rem 0;
-      }
+  <!-- FAVICON DO SITE (local na pasta imagens/) -->
+  <link rel="icon" type="image/svg+xml" href="imagens/favicon.svg" />
+  <link rel="shortcut icon" href="imagens/favicon.svg" />
 
-      .icon {
-        margin-bottom: 1rem;
-        line-height: 0;
-      }
+  <!-- ARQUIVO CSS DENTRO DA PASTA css/ (caminho relativo sem barra inicial!) -->
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- ARQUIVO JS DENTRO DA PASTA js/ -->
+  <script src="js/script.js" defer></script>
+</head>
+<body>
 
-      .button-container {
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-        margin-top: 2rem;
-      }
+  <!-- CABEÇALHO E NAVEGAÇÃO -->
+  <header class="site-header" id="header">
+    <div class="container header-content">
+      <!-- 🔴 [LOGO DO SITE]: Para usar imagem do logo, descomente a linha abaixo e salve em imagens/logo.svg -->
+      <!-- <a href="#inicio" class="brand-logo"><img src="imagens/logo.svg" alt="GR Presença Digital" style="height: 38px;"></a> -->
+      <a href="#inicio" class="brand-logo" aria-label="Presença Digital - Página Inicial">
+        <div class="brand-symbol">GR</div>
+        <div class="brand-name">Presença Digital</div>
+      </a>
 
-      button {
-        background-color: light-dark(#fff, #323232);
-        color: light-dark(#2B2D31, #FCFCFC);
-        border: 1px solid light-dark(#E2E3E4, #3E3E3E);
-        border-radius: 12px;
-        padding: 8px 12px;
-        font-size: 14px;
-        line-height: 21px;
-        cursor: pointer;
-        transition: background-color 0.2s;
-        font-weight: 400;
-        font-family: 'Inter', Helvetica, Arial, sans-serif;
-        width: 100%;
-      }
+      <nav aria-label="Navegação Principal">
+        <ul class="nav-menu">
+          <li><a href="#inicio" class="nav-link">Início</a></li>
+          <li><a href="#beneficios" class="nav-link">Por que Ter?</a></li>
+          <li><a href="#servicos" class="nav-link">Soluções</a></li>
+          <li><a href="#metodo" class="nav-link">Como Funciona</a></li>
+          <li><a href="#portfolio" class="nav-link">Modelos</a></li>
+          <li><a href="#pacotes" class="nav-link">Pacotes</a></li>
+          <li><a href="#crm" class="nav-link" style="color: #2563EB; font-weight: 700;">Novo: CRM</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        </ul>
+      </nav>
 
-      button:hover {
-        background-color: light-dark(#EAEAEB, #424242);
-      }
-
-      .hidden {
-        display: none;
-      }
-
-      /* Loading Spinner Animation */
-      .spinner {
-        margin: 0 auto 1.5rem auto;
-        width: 40px;
-        height: 40px;
-        border: 4px solid light-dark(#f0f0f0, #262626);
-        border-top: 4px solid light-dark(#076eff, #87a9ff); /* Blue color */
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-
-      .logo {
-        border-radius: 10px;
-        display: block;
-        margin: 0 auto 2rem auto;
-      }
-
-      .logo.hidden {
-        display: none;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <img
-        class="logo"
-        src="https://www.gstatic.com/images/branding/productlogos/ai_studio/v1/web-512dp/logo_ai_studio_color_1x_web_512dp.png"
-        alt="AI Studio Logo"
-        width="256"
-        height="256"
-      />
-      <div class="spinner"></div>
-      <div id="error-ui" class="hidden">
-        <div class="icon">
-          <svg
-            version="1.1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            width="48px"
-            height="48px"
-            fill="#D73A49"
-          >
-            <path
-              d="M12,2C6.486,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.514,2,12,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z"
-            />
+      <div class="header-actions">
+        <a href="#contato" class="btn-nav-contact js-wa-general" aria-label="Falar no WhatsApp com a GR Presença Digital">
+          <svg class="wa-icon" viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/>
           </svg>
-        </div>
-        <div id="stepOne" class="text-container">
-          <h1>Action required to load your app</h1>
-          <p>
-            It looks like your browser is blocking a required security cookie, which is common on
-            older versions of iOS and Safari.
+          <span>Falar no WhatsApp</span>
+        </a>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- MENU MOBILE -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <a href="#inicio" class="nav-link">Início</a>
+      <a href="#beneficios" class="nav-link">Por que Ter?</a>
+      <a href="#servicos" class="nav-link">Soluções</a>
+      <a href="#metodo" class="nav-link">Como Funciona</a>
+      <a href="#portfolio" class="nav-link">Modelos</a>
+      <a href="#pacotes" class="nav-link">Pacotes</a>
+      <a href="#crm" class="nav-link" style="color: #2563EB; font-weight: 700;">✨ Novo: CRM (Em Breve)</a>
+      <a href="#sobre" class="nav-link">Sobre</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tagline">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            Presença Digital Profissional e Acessível para Pequenos Negócios
+          </div>
+          <h1>Leve seu Negócio para o Digital e Atraia Clientes Todos os Dias.</h1>
+          <p class="hero-text">
+            A <strong>GR Presença Digital</strong> desenvolve soluções personalizadas e sob medida para profissionais autônomos e pequenos negócios de beleza e estética brilharem na internet.
           </p>
-          <div class="button-container">
-            <button id="authInSeparateWindowButton" onclick="redirectToReturnUrl(true)">Authenticate in new window</button>
+          <p class="hero-subtext">
+            Destaque sua marca no Google, organize seus links e encante seus clientes com um site exclusivo — com investimento acessível e sem complicação.
+          </p>
+          <div class="hero-ctas">
+            <a href="#" class="btn btn-primary js-wa-general" aria-label="Falar no WhatsApp com a GR Presença Digital">
+              <svg class="wa-icon" viewBox="0 0 24 24">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/>
+              </svg>
+              <span>Falar no WhatsApp</span>
+            </a>
+            <a href="#servicos" class="btn btn-secondary">
+              <span>Conhecer as soluções</span>
+            </a>
           </div>
         </div>
-        <div id="stepTwo" class="text-container hidden">
-          <h1>Action required to load your app</h1>
-          <p>
-            It looks like your browser is blocking a required security cookie, which is common on
-            older versions of iOS and Safari.
-          </p>
-          <div class="button-container">
-            <button id="interactButton" onclick="redirectToReturnUrl(false)">Close and continue</button>
-          </div>
-        </div>
-        <div id="stepThree" class="text-container hidden">
-          <h1>Almost there!</h1>
-          <p>
-            Grant permission for the required security cookie below.
-          </p>
-          <div class="button-container">
-            <button id="grantPermissionButton" onclick="grantStorageAccess()">Grant permission</button>
+
+        <div class="hero-visual">
+          <div class="hero-showcase-wrap">
+            <div class="floating-card-google">
+              <div style="width: 26px; height: 26px; border-radius: 6px; background: #EA4335; color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <div style="font-size: 0.65rem; font-weight: 700; color: #1E293B;">Google Perfil</div>
+                <div style="font-size: 0.58rem; color: #16A34A; font-weight: 600;">★ 5.0 • Verificado</div>
+              </div>
+            </div>
+
+            <div class="phone-mockup">
+              <div class="phone-speaker"></div>
+              <div class="phone-screen">
+                <div class="phone-header-profile">
+                  <div class="phone-avatar">GR</div>
+                  <div class="phone-profile-name">Studio de Beleza</div>
+                  <div class="phone-profile-sub">Agendamentos VIP</div>
+                  <div class="phone-status-pill">
+                    <span class="status-dot"></span>
+                    <span>Online WhatsApp</span>
+                  </div>
+                </div>
+
+                <div class="phone-links-list">
+                  <div class="phone-link-btn featured">
+                    <div class="phone-link-icon" style="background: rgba(255,255,255,0.2);">
+                      <svg class="wa-icon" style="width: 11px; height: 11px;" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/></svg>
+                    </div>
+                    <span>Agendar pelo WhatsApp</span>
+                  </div>
+
+                  <div class="phone-link-btn">
+                    <div class="phone-link-icon" style="background: #EFF6FF; color: #2563EB;">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+                    </div>
+                    <span>Ver Site Exclusivo</span>
+                  </div>
+
+                  <div class="phone-link-btn">
+                    <div class="phone-link-icon" style="background: #FEF3C7; color: #D97706;">
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <span>Procedimentos e Preços</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-card-presence">
+              <div style="width: 26px; height: 26px; border-radius: 6px; background: #2563EB; color: white; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <div style="font-size: 0.65rem; font-weight: 700; color: #1E293B;">Identidade Única</div>
+                <div style="font-size: 0.58rem; color: #64748B;">Site + Google + Bio</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="benefits-section" id="beneficios">
+      <div class="container">
+        <div class="section-header">
+          <h2>Por que ter uma presença digital profissional?</h2>
+          <p>Para pequenos negócios e profissionais autônomos, estar bem posicionado na internet é o diferencial que transforma curiosas em clientes.</p>
+        </div>
+
+        <div class="unified-grid-3">
+          <div class="clean-card">
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Encontrada na Sua Região</h3>
+            <p>Quando alguém busca por serviços perto de você no Google, sua empresa precisa aparecer no topo com avaliações e rotas fáceis.</p>
+          </div>
+
+          <div class="clean-card">
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="M3 9h18"/></svg>
+            </div>
+            <h3>Organização que Transmite Confiança</h3>
+            <p>Um site limpo e elegante e links organizados no Instagram passam credibilidade imediata, valorizando o seu trabalho artesanal e técnico.</p>
+          </div>
+
+          <div class="clean-card">
+            <div class="card-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3>Investimento Acessível</h3>
+            <p>Soluções pensadas sob medida e acessíveis para o orçamento de pequenos empreendedores, com excelente custo-benefício.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUÇÕES -->
+    <section class="services-section" id="servicos">
+      <div class="container">
+        <div class="section-header">
+          <h2>Veja o que pode ser criado para o seu negócio</h2>
+          <p>Conheça exemplos visuais de como cada solução é estruturada e a importância estratégica de cada ferramenta para atrair clientes.</p>
+        </div>
+
+        <div class="interactive-showcase">
+          <div class="showcase-tabs" role="tablist">
+            <button class="showcase-tab-btn active" onclick="switchTab(0)" role="tab">1. Site</button>
+            <button class="showcase-tab-btn" onclick="switchTab(1)" role="tab">2. Google Perfil</button>
+            <button class="showcase-tab-btn" onclick="switchTab(2)" role="tab">3. Link para Bio</button>
+            <button class="showcase-tab-btn" onclick="switchTab(3)" role="tab">4. Cartão Digital</button>
+            <button class="showcase-tab-btn" onclick="switchTab(4)" role="tab">5. Divulgação Local</button>
+          </div>
+
+          <!-- Tab 1 -->
+          <div class="showcase-panel active" id="panel-0">
+            <div class="showcase-panel-info">
+              <span class="portfolio-tag">Solução 1 • Site Exclusivo</span>
+              <h3>Site Personalizado e Responsivo</h3>
+              <p>Estrutura limpa contendo cabeçalho institucional, apresentação dos serviços, tabela informativa, endereço/atendimento e botão com chamada direta para o WhatsApp.</p>
+              <p><strong>Por que é importante:</strong> Transmite seriedade profissional imediata, facilitando o contato de clientes que desejam agendar horários sem burocracia.</p>
+              <a href="#contato" class="btn btn-primary js-wa-general" style="font-size: 0.8rem; padding: 8px 16px;">Falar no WhatsApp</a>
+            </div>
+            <div class="showcase-preview-box">
+              <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px; text-align: left;">
+                <div style="font-weight: 700; font-size: 0.78rem; color: #14213D; margin-bottom: 2px;">Studio Bela Estética</div>
+                <div style="font-size: 0.65rem; color: #64748B; margin-bottom: 8px;">Realce sua beleza natural com cuidados especializados</div>
+                <div style="font-size: 0.62rem; background: #EFF6FF; color: #2563EB; padding: 4px 8px; border-radius: 4px; margin-bottom: 6px;">• Design de Sobrancelhas • Lash Lifting</div>
+                <div style="background: #25D366; color: white; border-radius: 6px; padding: 6px; font-size: 0.68rem; font-weight: 600; text-align: center;">Agendar pelo WhatsApp</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2 -->
+          <div class="showcase-panel" id="panel-1">
+            <div class="showcase-panel-info">
+              <span class="portfolio-tag">Solução 2 • Visibilidade no Mapa</span>
+              <h3>Google Perfil da Empresa Otimizado</h3>
+              <p>Posicionamos o seu negócio no topo das buscas locais do Google e Google Maps quando clientes procuram por serviços na sua região.</p>
+              <p><strong>Por que é importante:</strong> É onde as pessoas buscam profissionais no momento exato em que precisam de atendimento local, gerando ligações e rotas de GPS diretas.</p>
+              <a href="#contato" class="btn btn-primary js-wa-general" style="font-size: 0.8rem; padding: 8px 16px;">Falar no WhatsApp</a>
+            </div>
+            <div class="showcase-preview-box">
+              <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px; text-align: left;">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                  <div style="width: 24px; height: 24px; background: #EA4335; color: white; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700;">G</div>
+                  <div style="font-weight: 700; font-size: 0.78rem; color: #14213D;">Seu Negócio no Maps</div>
+                </div>
+                <div style="font-size: 0.65rem; color: #16A34A; font-weight: 600; margin-bottom: 4px;">★★★★★ 5.0 (Avaliações Verificadas)</div>
+                <div style="font-size: 0.62rem; color: #64748B;">Apareça no topo das buscas locais e receba rotas de clientes.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3 -->
+          <div class="showcase-panel" id="panel-2">
+            <div class="showcase-panel-info">
+              <span class="portfolio-tag">Solução 3 • Instagram Profissional</span>
+              <h3>Link para Bio Organizado</h3>
+              <p>Centralizamos todos os seus canais de atendimento, catálogo de procedimentos, tabela de preços e rotas em um único link elegante no Instagram.</p>
+              <p><strong>Por que é importante:</strong> Elimina a confusão na hora da seguidora marcar horário, transformando curiosas do Instagram em clientes agendadas.</p>
+              <a href="#contato" class="btn btn-primary js-wa-general" style="font-size: 0.8rem; padding: 8px 16px;">Falar no WhatsApp</a>
+            </div>
+            <div class="showcase-preview-box">
+              <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px; text-align: left;">
+                <div style="font-weight: 700; font-size: 0.75rem; color: #14213D; margin-bottom: 6px; text-align: center;">@seu.estudio</div>
+                <div style="background: #2563EB; color: white; border-radius: 6px; padding: 6px; font-size: 0.65rem; font-weight: 600; text-align: center; margin-bottom: 4px;">💬 Falar no WhatsApp</div>
+                <div style="background: white; border: 1px solid #CBD5E1; color: #14213D; border-radius: 6px; padding: 5px; font-size: 0.62rem; font-weight: 600; text-align: center;">📍 Ver Endereço / GPS</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4 -->
+          <div class="showcase-panel" id="panel-3">
+            <div class="showcase-panel-info">
+              <span class="portfolio-tag">Solução 4 • Networking Moderno</span>
+              <h3>Cartão Digital Interativo</h3>
+              <p>Um cartão de visitas digital com toque interativo que pode ser compartilhado facilmente no WhatsApp com parcerias e novas clientes.</p>
+              <p><strong>Por que é importante:</strong> Dispensa cartões de papel impressos e garante que seus contatos fiquem salvos de forma interativa no celular de quem receber.</p>
+              <a href="#contato" class="btn btn-primary js-wa-general" style="font-size: 0.8rem; padding: 8px 16px;">Falar no WhatsApp</a>
+            </div>
+            <div class="showcase-preview-box">
+              <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px; text-align: left;">
+                <div style="font-weight: 700; font-size: 0.75rem; color: #14213D; margin-bottom: 4px;">Cartão Digital Toque Único</div>
+                <div style="font-size: 0.62rem; color: #64748B; margin-bottom: 6px;">Toque para ligar, chamar no WhatsApp ou abrir o Instagram.</div>
+                <div style="font-size: 0.6rem; font-weight: 600; color: #2563EB;">✨ Compartilhamento Ilimitado</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 5 -->
+          <div class="showcase-panel" id="panel-4">
+            <div class="showcase-panel-info">
+              <span class="portfolio-tag">Solução 5 • Atração Regional</span>
+              <h3>Divulgação Local Estratégica</h3>
+              <p>Planejamento e ações de divulgação direcionadas para grupos e comunidades locais da sua região, promovendo seus serviços diretamente para quem mora perto do seu estúdio.</p>
+              <p><strong>Por que é importante:</strong> Atrai o público que realmente pode frequentar seu espaço com frequência, enchendo sua agenda com clientes vizinhas.</p>
+              <a href="#contato" class="btn btn-primary js-wa-general" style="font-size: 0.8rem; padding: 8px 16px;">Falar no WhatsApp</a>
+            </div>
+            <div class="showcase-preview-box">
+              <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 8px; padding: 14px; text-align: left;">
+                <div style="font-weight: 700; font-size: 0.75rem; color: #14213D; margin-bottom: 4px;">🎯 Foco na Região</div>
+                <div style="font-size: 0.62rem; color: #64748B; margin-bottom: 6px;">Estratégias para grupos de bairros e redes locais.</div>
+                <div style="font-size: 0.6rem; font-weight: 600; color: #16A34A;">📈 Mais Clientes Próximas</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÉTODO -->
+    <section class="process-section" id="metodo">
+      <div class="container">
+        <div class="section-header">
+          <h2>Como funciona o nosso método de atendimento</h2>
+          <p>Um processo simples, transparente e acessível para tirar sua presença digital do papel sem dor de cabeça.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-number">1</div>
+            <h3>Alinhamento WhatsApp</h3>
+            <p>O primeiro contato e alinhamento inicial é feito diretamente pelo WhatsApp para entender o momento do seu negócio.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">2</div>
+            <h3>Formulário e Detalhes</h3>
+            <p>As informações para a criação do negócio e prestação do serviço são enviadas de forma prática por formulário.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">3</div>
+            <h3>Criação Exclusiva</h3>
+            <p>Desenvolvemos seu projeto sob medida, unindo visual moderno, usabilidade e otimização para o Google.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-number">4</div>
+            <h3>No Ar e Clientes</h3>
+            <p>Sua presença digital fica ativa, pronta para atrair novas clientes e valorizar sua marca no dia a dia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    <section class="portfolio-section" id="portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2>Modelos e Amostras de Portfólio</h2>
+          <p>Explore abaixo os 6 modelos conceituais de sites de amostra desenvolvidos para inspirar e demonstrar o padrão dos nossos projetos.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          
+          <!-- AMOSTRA 1 -->
+          <div class="portfolio-card">
+            <!-- 🔴 [SUBSTITUA AQUI]: Link do seu site de amostra 1 (ex: href="amostras/site1.html" ou href="https://...") -->
+            <a href="SEU_LINK_DO_SITE_1.html" target="_blank" rel="noopener noreferrer" aria-label="Ver Amostra 1">
+              <!-- 🔴 [IMAGEM LOCAL 1]: Salve sua imagem na pasta imagens/port1.webp -->
+              <img src="imagens/port1.webp" onerror="this.onerror=null; this.src='https://i.postimg.cc/PxyMdNQ1/port1.webp'" alt="Amostra Conceitual 1" loading="lazy" />
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Amostra • Lash & Beauty</span>
+              <h3>Estilo Clean e Soft</h3>
+              <p>Paleta suave, foco em leveza, delicadeza e destaque para o portfólio de olhares e cílios.</p>
+              <!-- 🔴 [SUBSTITUA AQUI]: Link do botão de amostra 1 -->
+              <a href="SEU_LINK_DO_SITE_1.html" target="_blank" rel="noopener noreferrer" class="portfolio-button">Explorar amostra →</a>
+            </div>
+          </div>
+
+          <!-- AMOSTRA 2 -->
+          <div class="portfolio-card">
+            <!-- 🔴 [SUBSTITUA AQUI]: Link do seu site de amostra 2 -->
+            <a href="SEU_LINK_DO_SITE_2.html" target="_blank" rel="noopener noreferrer" aria-label="Ver Amostra 2">
+              <!-- 🔴 [IMAGEM LOCAL 2]: Salve sua imagem na pasta imagens/port2.webp -->
+              <img src="imagens/port2.webp" onerror="this.onerror=null; this.src='https://i.postimg.cc/fRHvvmmQ/Salao-de-Beleza.webp'" alt="Amostra Conceitual 2" loading="lazy" />
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Amostra • Fios e Visagismo</span>
+              <h3>Studio de Beleza Exclusivo</h3>
+              <p>Layout sofisticado em tons alabaster e carvão, ideal para especialistas em cabelo e visagismo.</p>
+              <!-- 🔴 [SUBSTITUA AQUI]: Link do botão de amostra 2 -->
+              <a href="SEU_LINK_DO_SITE_2.html" target="_blank" rel="noopener noreferrer" class="portfolio-button">Explorar amostra →</a>
+            </div>
+          </div>
+
+          <!-- AMOSTRA 3 -->
+          <div class="portfolio-card">
+            <!-- 🔴 [SUBSTITUA AQUI]: Link do seu site de amostra 3 -->
+            <a href="SEU_LINK_DO_SITE_3.html" target="_blank" rel="noopener noreferrer" aria-label="Ver Amostra 3">
+              <!-- 🔴 [IMAGEM LOCAL 3]: Salve sua imagem na pasta imagens/port3.webp -->
+              <img src="imagens/port3.webp" onerror="this.onerror=null; this.src='https://i.postimg.cc/CKXH30cr/Captura-de-tela-2026-09-23-181325.webp'" alt="Amostra Conceitual 3" loading="lazy" />
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Amostra • Minimalismo Premium</span>
+              <h3>Estilo Minimal Modern</h3>
+              <p>Foco total em conversão rápida, tabela de procedimentos e agendamento via WhatsApp.</p>
+              <!-- 🔴 [SUBSTITUA AQUI]: Link do botão de amostra 3 -->
+              <a href="SEU_LINK_DO_SITE_3.html" target="_blank" rel="noopener noreferrer" class="portfolio-button">Explorar amostra →</a>
+            </div>
+          </div>
+
+          <!-- AMOSTRA 4 -->
+          <div class="portfolio-card">
+            <!-- 🔴 [SUBSTITUA AQUI]: Link do seu site de amostra 4 -->
+            <a href="SEU_LINK_DO_SITE_4.html" target="_blank" rel="noopener noreferrer" aria-label="Ver Amostra 4">
+              <!-- 🔴 [IMAGEM LOCAL 4]: Salve sua imagem na pasta imagens/port4.webp -->
+              <img src="imagens/port4.webp" onerror="this.onerror=null; this.src='https://i.postimg.cc/tJn36B73/estetica-avancada.webp'" alt="Amostra Conceitual 4" loading="lazy" />
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Amostra • Estética Avançada</span>
+              <h3>Estilo Clínico e Sofisticado</h3>
+              <p>Design voltado para clínicas de estética, destacando protocolos com rigor profissional.</p>
+              <!-- 🔴 [SUBSTITUA AQUI]: Link do botão de amostra 4 -->
+              <a href="SEU_LINK_DO_SITE_4.html" target="_blank" rel="noopener noreferrer" class="portfolio-button">Explorar amostra →</a>
+            </div>
+          </div>
+
+          <!-- AMOSTRA 5 -->
+          <div class="portfolio-card">
+            <!-- 🔴 [SUBSTITUA AQUI]: Link do seu site de amostra 5 -->
+            <a href="SEU_LINK_DO_SITE_5.html" target="_blank" rel="noopener noreferrer" aria-label="Ver Amostra 5">
+              <!-- 🔴 [IMAGEM LOCAL 5]: Salve sua imagem na pasta imagens/port5.webp -->
+              <img src="imagens/port5.webp" onerror="this.onerror=null; this.src='https://i.postimg.cc/c49Z9T0c/barbearia-moderna.webp'" alt="Amostra Conceitual 5" loading="lazy" />
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Amostra • Barbearia Urbana</span>
+              <h3>Estilo Urbano & Marcante</h3>
+              <p>Tipografia forte, tons escuros e texturas que transmitem masculinidade e estilo.</p>
+              <!-- 🔴 [SUBSTITUA AQUI]: Link do botão de amostra 5 -->
+              <a href="SEU_LINK_DO_SITE_5.html" target="_blank" rel="noopener noreferrer" class="portfolio-button">Explorar amostra →</a>
+            </div>
+          </div>
+
+          <!-- AMOSTRA 6 -->
+          <div class="portfolio-card">
+            <!-- 🔴 [SUBSTITUA AQUI]: Link do seu site de amostra 6 -->
+            <a href="SEU_LINK_DO_SITE_6.html" target="_blank" rel="noopener noreferrer" aria-label="Ver Amostra 6">
+              <!-- 🔴 [IMAGEM LOCAL 6]: Salve sua imagem na pasta imagens/port6.webp -->
+              <img src="imagens/port6.webp" onerror="this.onerror=null; this.src='https://i.postimg.cc/xd7G2X48/nail-art-criativa.webp'" alt="Amostra Conceitual 6" loading="lazy" />
+            </a>
+            <div class="portfolio-info">
+              <span class="portfolio-tag">Amostra • Nail Art Autoral</span>
+              <h3>Estilo Criativo & Color</h3>
+              <p>Paletas vibrantes e artísticas para nail designers que expressam autenticidade.</p>
+              <!-- 🔴 [SUBSTITUA AQUI]: Link do botão de amostra 6 -->
+              <a href="SEU_LINK_DO_SITE_6.html" target="_blank" rel="noopener noreferrer" class="portfolio-button">Explorar amostra →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACOTES -->
+    <section class="packages-section" id="pacotes">
+      <div class="container">
+        <div class="section-header">
+          <h2>Pacotes sob medida para o seu momento</h2>
+          <p>Soluções acessíveis, flexíveis e personalizadas para colocar sua marca em destaque no digital.</p>
+        </div>
+
+        <div class="unified-grid-3">
+          <div class="package-card">
+            <h3>Presença Digital</h3>
+            <p class="package-description">Para organizar os pontos essenciais da sua presença na internet.</p>
+            <div class="package-price">
+              <span>INVESTIMENTO ACESSÍVEL</span>
+              Sob Medida
+            </div>
+            <ul class="package-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Perfil da Empresa no Google Otimizado</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Link personalizado para Bio do Instagram</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Cartão Digital Interativo</span>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-secondary btn-block js-wa-p1">
+              <span>Falar no WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="package-card featured">
+            <span class="featured-badge">Mais Completo</span>
+            <h3>Presença + Site</h3>
+            <p class="package-description">Presença digital completa com Google Perfil e site próprio exclusivo.</p>
+            <div class="package-price">
+              <span>INVESTIMENTO ACESSÍVEL</span>
+              Excelente Custo-Benefício
+            </div>
+            <ul class="package-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Google Perfil da Empresa Otimizado & SEO</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Link para Bio + Cartão Digital</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Criação de Site Exclusivo de Alto Padrão</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Página de serviços e galeria organizadas</span>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary btn-block js-wa-p2">
+              <span>Falar no WhatsApp</span>
+            </a>
+          </div>
+
+          <div class="package-card">
+            <h3>Presença + Divulgação</h3>
+            <p class="package-description">Para estruturar a presença digital completa e divulgar os serviços localmente.</p>
+            <div class="package-price">
+              <span>INVESTIMENTO ACESSÍVEL</span>
+              Foco em Atração Local
+            </div>
+            <ul class="package-features">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Google Perfil + Link na Bio</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Cartão Digital Interativo</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Criação de Site Exclusivo</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Divulgação Local Estratégica (Grupos da Região)</span>
+              </li>
+            </ul>
+            <a href="#" class="btn btn-secondary btn-block js-wa-p3">
+              <span>Falar no WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO CRM (EM BREVE) -->
+    <section class="crm-section" id="crm">
+      <div class="container">
+        <div class="crm-card-wrapper">
+          <div class="crm-badge">
+            <span class="pulse-dot"></span>
+            <span>EM BREVE • LANÇAMENTO</span>
+          </div>
+
+          <h2 class="crm-title" style="text-align: left; margin-bottom: 10px;">
+            CRM para Profissionais da Beleza e Autônomos
+          </h2>
+
+          <p class="crm-desc">
+            Seja o primeiro a usar o CRM feito especialmente para Nail Designers, Lash Designers, Barbeiros, Especialistas em Estética e profissionais autônomos.
+          </p>
+
+          <!-- Módulos Principais do CRM -->
+          <div class="crm-features-grid crm-features-grid-core">
+            <div class="crm-feature-item">
+              <span class="crm-tag-core">Módulo CRM</span>
+              <span class="crm-feature-icon">👥</span>
+              <h4>Gestão de Clientes</h4>
+              <p>Histórico do cliente, serviços e procedimentos realizados.</p>
+            </div>
+
+            <div class="crm-feature-item">
+              <span class="crm-tag-core">Módulo CRM</span>
+              <span class="crm-feature-icon">📅</span>
+              <h4>Google Agenda Integrada</h4>
+              <p>Lançamento com um clique para o Google Agenda direto no módulo do CRM.</p>
+            </div>
+          </div>
+
+          <!-- Bônus Especiais -->
+          <div class="crm-bonuses-heading">
+            <span>🎁 Bônus Inclusos no CRM:</span>
+          </div>
+
+          <div class="crm-features-grid crm-features-grid-bonuses">
+            <div class="crm-feature-item">
+              <span class="crm-tag-bonus">Bônus Exclusivo</span>
+              <span class="crm-feature-icon">💬</span>
+              <h4>Mensagens Prontas</h4>
+              <p>Modelos de mensagens prontas para clicar e enviar ao cliente.</p>
+            </div>
+
+            <div class="crm-feature-item">
+              <span class="crm-tag-bonus">Bônus Exclusivo</span>
+              <span class="crm-feature-icon">💰</span>
+              <h4>Controle Financeiro</h4>
+              <p>Saiba quanto faturou no dia, na semana e mês, lance suas despesas com controle facilitado.</p>
+            </div>
+
+            <div class="crm-feature-item">
+              <span class="crm-tag-bonus">Bônus Exclusivo</span>
+              <span class="crm-feature-icon">🧮</span>
+              <h4>Calculadora de Preços</h4>
+              <p>Descubra quanto cobrar por um serviço através dos custos inseridos e porcentagem que deseja receber, recebendo uma sugestão de valor.</p>
+            </div>
+          </div>
+
+          <!-- Destaques do Lançamento -->
+          <div class="crm-perks-box">
+            <ul class="crm-perks-list">
+              <li class="crm-perk-item">
+                <span class="check-icon">✓</span>
+                <span>Preço especial no lançamento para os 10 primeiros</span>
+              </li>
+              <li class="crm-perk-item">
+                <span class="check-icon">✓</span>
+                <span>Funciona no celular, leve e até offline</span>
+              </li>
+              <li class="crm-perk-item">
+                <span class="check-icon">✓</span>
+                <span>Feito sob medida para a sua realidade</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CTA Grupo de Lançamento -->
+          <div class="crm-cta-container">
+            <a href="#crm" class="crm-cta-btn js-wa-crm" aria-label="Quero entrar no grupo de lançamento do CRM">
+              <svg class="wa-icon" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/></svg>
+              <span>Quero entrar no grupo de lançamento</span>
+            </a>
+            <span class="crm-footnote">
+              🔒 Vagas limitadas no grupo VIP para garantir a condição exclusiva de pré-estreia.
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE A FUNDADORA -->
+    <section class="about-section" id="sobre">
+      <div class="container">
+        <div class="about-card-wrapper">
+          <div class="about-photo-column">
+            <div class="about-photo-frame">
+              <!-- 🔴 [IMAGEM LOCAL DA FUNDADORA]: Salve sua foto na pasta imagens/fundadora.webp -->
+              <img src="imagens/fundadora.webp" onerror="this.onerror=null; this.src='https://i.postimg.cc/SxrGBW0h/GR-Presenca-Digital-Fundadora.webp'" alt="Gleiciene Rocha" class="about-photo-img" loading="lazy" />
+              <div class="about-photo-badge">
+                <span class="badge-status-dot"></span>
+                <span>Fundadora • Gleiciene Rocha</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content-column">
+            <div class="hero-tagline" style="margin-bottom: 0; width: fit-content;">Sobre a Fundadora</div>
+            <p>
+              A <strong>GR Presença Digital</strong> nasceu com uma missão clara: ajudar profissionais autônomos e pequenos negócios do setor de beleza e estética a brilharem na internet com elegância, sem burocracia e com valores justos e acessíveis.
+            </p>
+            <p>
+              Cuidamos de toda a estrutura digital — Google Perfil, SEO local, sites e links — facilitando o agendamento de horários e valorizando o seu trabalho artesanal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="final-cta-section" id="contato">
+      <div class="container final-cta-card">
+        <h2>Pronta para colocar seu negócio no digital?</h2>
+        <p>Vamos conversar pelo WhatsApp sobre o seu estúdio e encontrar a solução perfeita para a sua marca.</p>
+        <a href="#" class="btn btn-primary js-wa-general">
+          <span>Falar no WhatsApp</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div style="display: flex; align-items: center; gap: 9px; margin-bottom: 8px;">
+          <div class="brand-symbol" style="width: 30px; height: 30px; font-size: 0.85rem;">GR</div>
+          <h3 style="margin: 0; font-size: 1.05rem; color: #FFFFFF;">Presença Digital</h3>
+        </div>
+        <p>Presença digital sofisticada, profissional e acessível para negócios de beleza e pequenos empreendedores.</p>
+      </div>
+
+      <div class="footer-nav">
+        <h4>Navegação</h4>
+        <ul class="footer-links">
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#beneficios">Por que Ter?</a></li>
+          <li><a href="#servicos">Soluções</a></li>
+          <li><a href="#metodo">Como Funciona</a></li>
+          <li><a href="#portfolio">Modelos & Amostras</a></li>
+          <li><a href="#pacotes">Pacotes</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Redes Sociais</h4>
+        <div class="social-icons">
+          <!-- 🔴 [SUBSTITUA AQUI]: Link do seu Instagram (ex: href="https://instagram.com/seu.perfil") -->
+          <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </a>
+          <!-- 🔴 [SUBSTITUA AQUI]: Link do seu Facebook -->
+          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <!-- 🔴 [SUBSTITUA AQUI]: Link do seu Pinterest -->
+          <a href="https://br.pinterest.com/" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Pinterest">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0a12 12 0 0 0-4.33 23.17c-.06-.98-.01-2.14.25-3.14l.87-3.69s-.22-.44-.22-1.09c0-1.02.59-1.78 1.33-1.78.63 0 .93.47.93 1.04 0 .63-.4 1.58-.61 2.45-.17.72.36 1.3 1.07 1.3 1.28 0 2.27-1.35 2.27-3.3 0-1.73-1.24-2.94-3.02-2.94-2.06 0-3.27 1.55-3.27 3.15 0 .62.24 1.29.54 1.65.06.07.07.13.05.2-.06.24-.2 1-.23 1.14-.04.16-.13.19-.3.11-1.12-.52-1.82-2.16-1.82-3.48 0-2.83 2.06-5.43 5.95-5.43 3.13 0 5.56 2.23 5.56 5.21 0 3.11-1.96 5.61-4.68 5.61-.91 0-1.77-.47-2.06-1.03l-.56 2.14c-.2.77-.75 1.74-1.12 2.33A12 12 0 1 0 12 0z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </div>
-    <script>
-      const AUTH_FLOW_TEST_COOKIE_NAME = '__SECURE-aistudio_auth_flow_may_set_cookies';
-      const COOKIE_VALUE = 'true';
 
-      function getCookie(name) {
-        const cookies = document.cookie.split(';');
-        for (let i = 0; i < cookies.length; i++) {
-          let cookie = cookies[i].trim();
-          if (cookie.startsWith(name + '=')) {
-            return cookie.substring(name.length + 1);
-          }
-        }
-        return null;
-      }
+    <div class="container footer-bottom">
+      <p>&copy; 2026 GR Presença Digital. Todos os direitos reservados.</p>
+      <div class="footer-legal-inline">
+        <a onclick="openLegalModal('privacidade')">Política de Privacidade</a>
+        <span class="sep">•</span>
+        <a onclick="openLegalModal('termos')">Termos de Uso</a>
+        <span class="sep">•</span>
+        <a onclick="openLegalModal('cookies')">Cookies</a>
+      </div>
+    </div>
+  </footer>
 
-      function setAuthFlowTestCookie() {
-        // Set the cookie's TTL to 1 minute. This is a short lived cookie because it is only used
-        // when the user does not have an auth token or their auth token needs to be reset.
-        // Making this cookie too long-lived allows the user to get into a state where they can't
-        // mint a new auth token.
-        document.cookie = `${AUTH_FLOW_TEST_COOKIE_NAME}=${COOKIE_VALUE}; Path=/; Secure; SameSite=None; Domain=${window.location.hostname}; Partitioned; Max-Age=60;`;
-      }
+  <!-- MODAL DE POLÍTICAS -->
+  <div class="legal-modal-overlay" id="legalModal">
+    <div class="legal-modal-content">
+      <button class="legal-modal-close" onclick="closeLegalModal()">✕</button>
+      <div id="legalModalBody"></div>
+    </div>
+  </div>
 
-      /**
-       * Returns true if the test cookie is set, false otherwise.
-       */
-      function authFlowTestCookieIsSet() {
-        return getCookie(AUTH_FLOW_TEST_COOKIE_NAME) === COOKIE_VALUE;
-      }
+  <!-- WHATSAPP FLUTUANTE -->
+  <a href="#" class="whatsapp-floating js-wa-general" aria-label="Falar pelo WhatsApp" title="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.74 14.12c-.24.68-1.4 1.31-1.94 1.39-.51.08-1.18.11-1.92-.13-.45-.15-1.04-.34-1.8-.67-3.19-1.39-5.26-4.63-5.42-4.84-.16-.21-1.3-1.73-1.3-3.3 0-1.57.82-2.34 1.11-2.66.29-.32.63-.4 0.85-.4.21 0 .43 0 .61.01.2 0 .46-.07.72.54.26.63.89 2.17.97 2.33.08.16.13.35.03.56-.1.21-.16.35-.31.53-.16.18-.33.4-.47.54-.16.15-.33.32-.14.64.19.32.84 1.38 1.8 2.23 1.24 1.1 2.28 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.82-.96 1.04-1.28.21-.32.43-.27.72-.16.29.11 1.85.87 2.17 1.03.32.16.53.24.61.37.08.13.08.77-.16 1.45z"/>
+    </svg>
+  </a>
 
-      /**
-       * Redirects to the return url. If autoClose is true, then the return url will be opened in a
-       * new window, and it will be closed automatically when the page loads.
-       * Options:
-       *   storageAccessGranted: if true, appends __storage_access_granted=1 to
-       *   the return url so the Lua auth script can set the test cookie
-       *   server-side (needed for Safari/iOS where document.cookie is blocked).
-       */
-      async function redirectToReturnUrl(autoClose, storageAccessGranted = false) {
-        const initialReturnUrlStr = new URLSearchParams(window.location.search).get('return_url');
-        const returnUrl = initialReturnUrlStr ? new URL(initialReturnUrlStr) : null;
-
-        // Prevent potentially malicious URLs from being used
-        if (returnUrl.protocol.toLowerCase() === 'javascript:') {
-          console.error('Potentially malicious return URL blocked');
-          return;
-        }
-
-        if (storageAccessGranted) {
-          returnUrl.searchParams.set('__storage_access_granted', '1');
-        }
-
-        if (autoClose) {
-          returnUrl.searchParams.set('__auto_close', '1');
-          const url = new URL(window.location.href);
-          url.searchParams.set('return_url', returnUrl.toString());
-          // Land on the cookie check page first, so the user can interact with it before proceeding
-          // to the return url where cookies can be set.
-          window.open(url.toString(), '_blank');
-          const hasAccess = await document.hasStorageAccess();
-          document.querySelector('#stepOne').classList.add('hidden');
-          if (!hasAccess) {
-            document.querySelector('#stepThree').classList.remove('hidden');
-          } else {
-            window.location.reload();
-          }
-        } else {
-          window.location.href = returnUrl.toString();
-        }
-      }
-
-      /**
-       * Grants the browser permission to set cookies. If successful, then it redirects to the
-       * return url.
-       */
-      async function grantStorageAccess() {
-        try {
-          await document.requestStorageAccess();
-          // Recent Safari/iOS versions block document.cookie entirely in
-          // cross-site iframes, even after requestStorageAccess(). Only
-          // server-side Set-Cookie headers work. Signal to the Lua auth script
-          // via query param so it can set the test cookie server-side.
-          redirectToReturnUrl(false, /* storageAccessGranted= */ true);
-        } catch (err) {
-          console.log('error after button click: ', err);
-        }
-      }
-
-      /**
-       * Verifies that the browser can set cookies. If it can, then it redirects to the return url.
-       * If it can't, then it shows the error UI.
-       */
-      function verifyCanSetCookies() {
-        setAuthFlowTestCookie();
-        if (authFlowTestCookieIsSet()) {
-          // Check if we are on the auto-close flow, and if so show the interact button.
-          const returnUrl = new URLSearchParams(window.location.search).get('return_url');
-          const autoClose = new URL(returnUrl).searchParams.has('__auto_close');
-          if (autoClose) {
-            document.querySelector('#stepOne').classList.add('hidden');
-            document.querySelector('#stepTwo').classList.remove('hidden');
-          } else {
-            redirectToReturnUrl(false);
-            return;
-          }
-        }
-        // The cookie could not be set, so initiate the recovery flow.
-        document.querySelector('.logo').classList.add('hidden');
-        document.querySelector('.spinner').classList.add('hidden');
-        document.querySelector('#error-ui').classList.remove('hidden');
-      }
-
-      // Start the cookie verification process.
-      verifyCanSetCookies();
-    </script>
-  </body>
+</body>
 </html>
